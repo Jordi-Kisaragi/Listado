@@ -24,13 +24,13 @@ def Separar_lista(lista):
     Serie_temperatura=lista[2:]
     return Id_paciente,Fase_ensayo,Serie_temperatura
 
-def flolante(lista):
+def flotante(lista):
     
     '''
     Aqui el programa hace colocar las temperaturas en un numero flotante,
     separando el numero en .0
     '''
-    lista=[]
+    lista=[37.1,39.3,38.1]
     for n in range(2,len(lista)):
         lista[n]=float(lista[n])
     for n in range(3,len(lista)):
@@ -38,6 +38,18 @@ def flolante(lista):
     for n in range(4,len(lista)):
         lista[n]=float(lista[n])
         return lista
+    
+def ordenar(lista):
+    '''
+    Aqui ordenamos los elementos de la lista, referido a las temperaturas.
+    '''
+    lista=[37.1,39.3,38.1] 
+    for indice1 in range(len(lista)):    
+        for indice2 in range (indice1+1, len(lista)): 
+            print(lista[indice1],lista[indice2])
+            if lista[indice1]>lista[indice2]:             
+                lista[indice1],lista[indice2]=lista[indice2],lista[indice1]
+    print(lista)
     
 if __name__ =="__main__":
     lista=[]
