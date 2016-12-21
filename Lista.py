@@ -1,6 +1,6 @@
 '''
 Created on 30 nov. 2016
-Programa que se utiliza para formar una lista para trabajar en el programa principal.
+Programa que se utiliza para formar una lista y asi trabajar en el programa principal.
 @author: usuario
 '''
 def Crear_lista(lista):
@@ -28,25 +28,18 @@ def flotante(lista):
     
     '''
     Aqui el programa hace colocar las temperaturas en un numero flotante,
-    separando el numero en .0
+    separando el numero en .0 (solo hay que poner un numero natural, sin punto)
     '''
-    lista=[37.1,39.3,38.1]
-    for n in range(2,len(lista)):
+    for n in range(len(lista)):
         lista[n]=float(lista[n])
-    for n in range(3,len(lista)):
-        lista[n]=float(lista[n])
-    for n in range(4,len(lista)):
-        lista[n]=float(lista[n])
-        return lista
+    return lista
     
 def ordenar(lista):
     '''
     Aqui ordenamos los elementos de la lista, referido a las temperaturas.
-    '''
-    lista=[37.1,39.3,38.1] 
+    ''' 
     for indice1 in range(len(lista)):    
         for indice2 in range (indice1+1, len(lista)): 
-            print(lista[indice1],lista[indice2])
             if lista[indice1]>lista[indice2]:             
                 lista[indice1],lista[indice2]=lista[indice2],lista[indice1]
     print(lista)
@@ -55,3 +48,5 @@ if __name__ =="__main__":
     lista=[]
     print (Crear_lista(lista))
     Id_paciente,Fase_ensayo,Serie_temperatura=Separar_lista(lista)
+    print (flotante(Serie_temperatura))
+    print (ordenar(lista))
